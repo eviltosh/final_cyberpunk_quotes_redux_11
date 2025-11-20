@@ -11,53 +11,7 @@ st.set_page_config(
     page_icon="images/cyberpunk.ico",
     layout="wide"
 )
-# --- Hide Streamlit's GitHub Icon, Menu, and Footer ---
-hide_github_css = """
-<style>
-  /* hide links whose href contains github */
-  a[href*="github"] { display: none !important; }
 
-  /* extra: hide footer and menu if you want */
-  #MainMenu { visibility: hidden !important; }
-  footer { visibility: hidden !important; }
-
-  /* try to target the top-right icon (fallback) */
-  .stApp a[aria-label*="GitHub"], a[title*="GitHub"] { display:none !important; }
-</style>
-"""
-st.markdown(hide_github_css, unsafe_allow_html=True)
-
-from streamlit.components.v1 import html
-
-# --- Force-remove GitHub link/icon even when Streamlit injects it dynamically ---
-remove_github_js = """
-<script>
-const killGithub = () => {
-  document.querySelectorAll('a, button, svg').forEach(el => {
-    const href = el.getAttribute && el.getAttribute('href') || "";
-    const title = el.getAttribute && el.getAttribute('title') || "";
-    const aria = el.getAttribute && el.getAttribute('aria-label') || "";
-    const text = (el.innerText || "").toLowerCase();
-
-    if (
-      href.toLowerCase().includes("github") ||
-      title.toLowerCase().includes("github") ||
-      aria.toLowerCase().includes("github") ||
-      text.includes("github")
-    ) {
-      el.style.display = "none";
-      el.remove();
-    }
-  });
-};
-
-// Run now and observe all future DOM changes
-new MutationObserver(killGithub).observe(document.body, { childList: true, subtree: true });
-killGithub();
-</script>
-"""
-
-html(remove_github_js, height=0)
 
 
 # -------------------------------------------------------
@@ -467,6 +421,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
