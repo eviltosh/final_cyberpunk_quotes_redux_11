@@ -2,16 +2,18 @@ import streamlit as st
 from pathlib import Path
 import base64
 
-
-        
-
-st.markdown("""
-        <style>
-        #GithubIcon {
-            visibility: hidden;
-        }
-        </style>
-        """, unsafe_allow_html=True)
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # -------------------------------------------------------
 # MUST BE FIRST STREAMLIT COMMAND
 # -------------------------------------------------------
@@ -428,6 +430,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
