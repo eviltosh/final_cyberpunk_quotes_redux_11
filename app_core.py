@@ -12,20 +12,20 @@ st.set_page_config(
     layout="wide"
 )
 # --- Hide Streamlit's GitHub Icon, Menu, and Footer ---
-hide_github_style = """
-    <style>
-        /* Hide GitHub icon in the top-right corner */
-        .stApp a[href*="github"] {
-            display: none !important;
-        }
+hide_github_css = """
+<style>
+  /* hide links whose href contains github */
+  a[href*="github"] { display: none !important; }
 
-        /* Hide main menu */
-        #MainMenu {visibility: hidden;}
+  /* extra: hide footer and menu if you want */
+  #MainMenu { visibility: hidden !important; }
+  footer { visibility: hidden !important; }
 
-        /* Hide footer */
-        footer {visibility: hidden;}
-    </style>
+  /* try to target the top-right icon (fallback) */
+  .stApp a[aria-label*="GitHub"], a[title*="GitHub"] { display:none !important; }
+</style>
 """
+st.markdown(hide_github_css, unsafe_allow_html=True)
 import streamlit as st
 st.markdown(hide_github_style, unsafe_allow_html=True)
 
@@ -437,6 +437,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
