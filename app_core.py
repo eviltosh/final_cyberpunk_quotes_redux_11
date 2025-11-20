@@ -26,8 +26,7 @@ hide_github_css = """
 </style>
 """
 st.markdown(hide_github_css, unsafe_allow_html=True)
-import streamlit as st
-st.markdown(hide_github_style, unsafe_allow_html=True)
+
 
 
 # -------------------------------------------------------
@@ -437,6 +436,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
