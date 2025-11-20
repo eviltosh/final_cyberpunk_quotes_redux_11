@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as stF
 from pathlib import Path
 import base64
 
@@ -238,7 +238,7 @@ def run_app():
     # Sidebar
     # ----------------------------------------------------------
     st.sidebar.header("⚙️ Controls")
-    tickers_input = st.sidebar.text_input("Enter stock tickers (comma-separated):", "AAPL, TSLA, NVDA")
+    tickers_input = st.sidebar.text_input("Enter stock tickers (comma-separated):", "AAPL")
     period = st.sidebar.selectbox("Select time range:", ["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"])
     refresh_rate = st.sidebar.slider("Auto-refresh interval (seconds):", 10, 300, 60)
 
@@ -409,4 +409,5 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
 
