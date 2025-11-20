@@ -11,18 +11,6 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown("""
-<style>
-/* Hide Streamlit footer ("Made with Streamlit" logo) */
-div[data-testid="stFooter"] {
-    display: none !important;
-}
-footer {
-    visibility: hidden !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
 # -------------------------------------------------------
 # 🔥 TRUE GITHUB HIDING PATCH (FINAL)
 # -------------------------------------------------------
@@ -409,6 +397,3 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
-
-
-
