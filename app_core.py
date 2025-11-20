@@ -2,18 +2,7 @@ import streamlit as st
 from pathlib import Path
 import base64
 
-st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
 # -------------------------------------------------------
 # MUST BE FIRST STREAMLIT COMMAND
 # -------------------------------------------------------
@@ -22,6 +11,24 @@ st.set_page_config(
     page_icon="images/cyberpunk.ico",
     layout="wide"
 )
+# --- Hide Streamlit's GitHub Icon, Menu, and Footer ---
+hide_github_style = """
+    <style>
+        /* Hide GitHub icon in the top-right corner */
+        .stApp a[href*="github"] {
+            display: none !important;
+        }
+
+        /* Hide main menu */
+        #MainMenu {visibility: hidden;}
+
+        /* Hide footer */
+        footer {visibility: hidden;}
+    </style>
+"""
+import streamlit as st
+st.markdown(hide_github_style, unsafe_allow_html=True)
+
 
 # -------------------------------------------------------
 # CSS-ONLY SPLASH (SAFE)
@@ -430,6 +437,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
