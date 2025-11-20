@@ -1,4 +1,4 @@
-import streamlit as stF
+import streamlit as st
 from pathlib import Path
 import base64
 
@@ -409,5 +409,6 @@ def run_app():
 
 if __name__ == "__main__":
     run_app()
+
 
 
