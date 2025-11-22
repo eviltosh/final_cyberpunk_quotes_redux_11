@@ -33,13 +33,13 @@ st.set_page_config(
 # }
 
 # /* 🔥 KEEP THE HEADER (so chevron stays visible!) */
-header[data-testid="stHeader"] {
-    height: 2rem !important;     /* make header small but present */
-    background-color: #000000 !important;
-    border-bottom: 0 !important;
-}
-</style>
-""", unsafe_allow_html=True)
+# header[data-testid="stHeader"] {
+#     height: 2rem !important;     /* make header small but present */
+#     background-color: #000000 !important;
+#     border-bottom: 0 !important;
+# }
+# </style>
+# """, unsafe_allow_html=True)
 
 
 
@@ -450,6 +450,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
