@@ -13,23 +13,34 @@ st.set_page_config(
 # --- Hide Streamlit's GitHub Icon, Menu, and Footer ---
 st.markdown("""
 <style>
-/* Hide toolbar items */
-.stAppDeployButton,
-.stToolbar,
-[data-testid="stToolbar"],
+/* 🔥 Hide GitHub icon and unwanted toolbar stuff */
+button[title="View source code"],
+a[href*="github.com"],
 [data-testid="stDecoration"],
 [data-testid="stStatusWidget"],
-button[title="View source code"],
-a[href*="github.com"] {
+.stAppDeployButton {
     display: none !important;
 }
 
-/* Hide entire Streamlit header bar */
-header[data-testid="stHeader"] {
+/* 🔥 Hide three-dots menu */
+[data-testid="stToolbar"] button[title="Settings"],
+[data-testid="stToolbar"] button[title="Open documentation"],
+[data-testid="stToolbar"] button[title="Report a bug"],
+[data-testid="stToolbar"] button[title="Manage app"],
+[data-testid="stToolbar"] button[title="Ask a question"],
+[data-testid="stToolbar"] > div > button {
     display: none !important;
+}
+
+/* 🔥 KEEP THE HEADER (so chevron stays visible!) */
+header[data-testid="stHeader"] {
+    height: 2rem !important;     /* make header small but present */
+    background-color: #000000 !important;
+    border-bottom: 0 !important;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 # -------------------------------------------------------
@@ -439,6 +450,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
