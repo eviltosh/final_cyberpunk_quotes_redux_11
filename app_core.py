@@ -11,26 +11,26 @@ st.set_page_config(
     layout="wide"
 )
 # --- Hide Streamlit's GitHub Icon, Menu, and Footer ---
-st.markdown("""
-<style>
-/* 🔥 Hide GitHub icon and unwanted toolbar stuff */
-button[title="View source code"],
-a[href*="github.com"],
-[data-testid="stDecoration"],
-[data-testid="stStatusWidget"],
-.stAppDeployButton {
-    display: none !important;
-}
+# st.markdown("""
+# <style>
+# /* 🔥 Hide GitHub icon and unwanted toolbar stuff */
+# button[title="View source code"],
+# a[href*="github.com"],
+# [data-testid="stDecoration"],
+# [data-testid="stStatusWidget"],
+# .stAppDeployButton {
+#     display: none !important;
+# }
 
-/* 🔥 Hide three-dots menu */
-[data-testid="stToolbar"] button[title="Settings"],
-[data-testid="stToolbar"] button[title="Open documentation"],
-[data-testid="stToolbar"] button[title="Report a bug"],
-[data-testid="stToolbar"] button[title="Manage app"],
-[data-testid="stToolbar"] button[title="Ask a question"],
-[data-testid="stToolbar"] > div > button {
-    display: none !important;
-}
+# /* 🔥 Hide three-dots menu */
+# [data-testid="stToolbar"] button[title="Settings"],
+# [data-testid="stToolbar"] button[title="Open documentation"],
+# [data-testid="stToolbar"] button[title="Report a bug"],
+# [data-testid="stToolbar"] button[title="Manage app"],
+# [data-testid="stToolbar"] button[title="Ask a question"],
+# [data-testid="stToolbar"] > div > button {
+#     display: none !important;
+# }
 
 /* 🔥 KEEP THE HEADER (so chevron stays visible!) */
 header[data-testid="stHeader"] {
@@ -450,6 +450,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
