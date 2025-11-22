@@ -10,25 +10,6 @@ st.set_page_config(
     page_icon="images/cyberpunk.ico",
     layout="wide"
 )
-st.markdown("""
-<style>
-/* Hide toolbar items */
-.stAppDeployButton,
-.stToolbar,
-[data-testid="stToolbar"],
-[data-testid="stDecoration"],
-[data-testid="stStatusWidget"],
-button[title="View source code"],
-a[href*="github.com"] {
-    display: none !important;
-}
-
-/* Hide entire Streamlit header bar */
-header[data-testid="stHeader"] {
-    display: none !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 
 
@@ -440,6 +421,7 @@ def run_app():
 # run
 if __name__ == "__main__":
     run_app()
+
 
 
 
